@@ -8,6 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    test
+    <script>
+        async function getWeatherData(){
+            const response = await fetch('https://api.weatherapi.com/v1/forecast.json?key=f2fecc8a07584e8c9e8224802240304&q=Chicago&days=3&aqi=no&alerts=no', {mode: 'cors'});
+            const weatherData = await response.json()
+            console.log(weatherD.location)
+        }
+        getWeatherData();
+    </script>
 </body>
 </html>
