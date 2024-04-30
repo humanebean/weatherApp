@@ -5,6 +5,11 @@ function createDivWithText(text) {
       newDiv.textContent = text;
       weatherStuff.appendChild(newDiv);
   }
+  function createDivWithImg(src) {
+      let newImg=document.createElement("img");
+      newImg.src=src;
+      weatherStuff.appendChild(newImg);
+  }
   
 
 async function getWeatherData(target){
@@ -23,8 +28,14 @@ weatherForm.addEventListener('click',async (event)=>{
     createDivWithText(weatherData.location.name)
     createDivWithText(weatherData.forecast.forecastday[0].date)
     createDivWithText(weatherData.forecast.forecastday[0].day.avgtemp_f)
+    createDivWithText(weatherData.forecast.forecastday[0].day.condition.text)
+    createDivWithImg(weatherData.forecast.forecastday[0].day.condition.icon)
     createDivWithText(weatherData.forecast.forecastday[1].date)
     createDivWithText(weatherData.forecast.forecastday[1].day.avgtemp_f)
+    createDivWithText(weatherData.forecast.forecastday[1].day.condition.text)
+    createDivWithImg(weatherData.forecast.forecastday[1].day.condition.icon)
     createDivWithText(weatherData.forecast.forecastday[2].date)
     createDivWithText(weatherData.forecast.forecastday[2].day.avgtemp_f)
+    createDivWithText(weatherData.forecast.forecastday[2].day.condition.text)
+    createDivWithImg(weatherData.forecast.forecastday[2].day.condition.icon)
 })
