@@ -40,3 +40,12 @@
     background-color: rgba(0, 0, 0, 0.249);
 
    } 
+
+.zero{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-size: 2rem;
+   font-family: monospace;
+}
